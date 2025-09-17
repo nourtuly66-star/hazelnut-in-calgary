@@ -1,0 +1,39 @@
+/* print.css - keeps your hazelnut site clean for printing */
+body {
+  font-family: "Murecho", Arial, sans-serif;
+  color: #000;
+  background: #fff;
+  font-size: 12pt;
+  line-height: 1.5;
+}
+
+header, nav, .w3-top, .w3-sidebar, footer, .image-container {
+  display: none !important; /* hide decorative or nav elements */
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4 {
+  page-break-after: avoid;
+  color: #000;
+}
+
+article {
+  border: none;
+  background: #fff;
+  box-shadow: none;
+  margin: 0 0 1.5em 0;
+  padding: 0;
+}
+
+ul, ol {
+  margin: 0 0 1em 1.25em;
+}
+
+a::after {
+  content: " (" attr(href) ")"; /* show links as plain text */
+  font-size: 10pt;
+}
